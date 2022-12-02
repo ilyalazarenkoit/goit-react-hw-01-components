@@ -1,11 +1,14 @@
 import PropTypes from "prop-types";
 import statisticStyles from "./Statistics.module.css";
 
-function Statistics({data}) {
+function Statistics({title, data}) {
     
     return (
         <section className={statisticStyles.statistics}>
-        <h2 className="title">Upload stats</h2>
+            {title ? (<h2 className="title">{title}</h2>)
+            :
+            null }
+        
         <ul className={statisticStyles.stat__list}>
         {data.map(item => {
         return (
@@ -21,7 +24,11 @@ function Statistics({data}) {
 }
 
 Statistics.propTypes = {
-    data: PropTypes.array
+    data: PropTypes.arrayOf(PropTypes.shape({
+        id:PropTypes.string.isRequired,
+        label:PropTypes.string.isRequired,
+        percentage:PropTypes.number.isRequired
+    }).isRequired)
 }
 
 function randomColor() {
