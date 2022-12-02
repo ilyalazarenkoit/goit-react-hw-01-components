@@ -1,0 +1,22 @@
+.transaction__history {
+    margin:0 auto;
+    
+}
+
+tr {
+    background-color: rgb(203, 203, 203);
+    border-radius: 10px;
+    color:white;
+    
+}
+th, td {
+    padding : 20px;
+    text-align: center;
+    border:1px solid rgb(178, 176, 176);
+    border-radius: 5px;
+}
+
+
+th {
+    background-color: rgb(162, 161, 161);
+}
