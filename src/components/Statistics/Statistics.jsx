@@ -5,7 +5,7 @@ function Statistics({title, data}) {
     
     return (
         <section className={statisticStyles.statistics}>
-            {title ? (<h2 className="title">{title}</h2>)
+            {title ? <h2 className="title">{title}</h2>
             :
             null }
         
@@ -24,6 +24,7 @@ function Statistics({title, data}) {
 }
 
 Statistics.propTypes = {
+    title: PropTypes.string,
     data: PropTypes.arrayOf(PropTypes.shape({
         id:PropTypes.string.isRequired,
         label:PropTypes.string.isRequired,
